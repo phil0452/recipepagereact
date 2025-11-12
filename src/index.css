@@ -1,0 +1,125 @@
+ :root {
+ --White: 0 0% 100%;
+
+--Stone-100: 30, 54%, 90%;
+--Stone-150: 30, 18%, 87%;
+--Stone-600: 30, 10%, 34%;
+--Stone-900: 24, 5%, 18%;
+
+--Brown-800: 14, 45%, 36%;
+--Rose-800: 332, 51%, 32%;
+--Rose-50: 330, 100%, 98%;
+
+ }
+ @font-face {
+    font-family: 'outfit';
+    src:url('/src/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') /* Legacy iOS */
+}
+
+ @font-face {
+    font-family: 'YoungSerif';
+    src:url('/src/assets/fonts/young-serif/YoungSerif-Regular.ttf') /* Legacy iOS */
+}
+
+
+.font_weight_400 { font-weight: 400; }
+.font_weight_600 { font-weight: 600; }
+.font_weight_700 { font-weight: 700; }
+
+.font_size_paragraph { font-size: 16px; }
+
+.font_YoungSerif { font-family: 'YoungSerif'; }
+
+.text_color_Stone_600 { color: hsl(var(--Stone-600)); }
+.text_color_Rose_800 { color: hsl(var(--Rose-800)); }
+.text_color_Brown_800 { color: hsl(var(--Brown-800));}
+
+.bg_Rose_50 { background-color: hsl(var(--Rose-50));}
+
+.line_height { line-height: 1.5rem;}
+
+body {
+  font-family: 'outfit', sans-serif;
+  margin: 0;
+  padding: 0;  
+  background-color: hsl(var(--Rose-50));
+}
+
+#omelete_image {
+  height: 180px;  
+  width: 100%; /* 100 percent widht of the container */
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.outer_container { background-color: hsl(var(--White)); }
+
+.container { margin-inline: 30px; }
+
+@media screen and (min-width: 720px) {
+  .outer_container {
+    padding: 40px;
+    max-width: 670px; 
+    background-color: hsl(var(--White));
+    margin-inline: auto;
+    margin-block: 10px;
+    border-radius: 15px;
+
+  }
+  .container {
+     margin-inline: auto;     
+    border-radius: 15px;
+  }
+
+  #omelete_image { 
+    border-radius: 15px;
+    height: 280px;
+   }
+}
+
+h1,h2 { margin-top: 32px; }
+ul { 
+  padding: 0; 
+  width: 75%;
+  margin-inline: auto;
+ }
+
+@media screen and (min-width: 720px) {
+  ul { margin-inline: 20px; }
+}
+
+ul> li,
+ol> li { margin-block: 12px; }
+
+ol li::marker {
+  color: hsl(var(--Brown-800));
+  font-weight: 600;
+}
+
+ol> li,
+  ul> li {
+  padding-left: 1.5em; /* Space for custom bullet */
+}
+
+.preparation_container {
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+
+hr { 
+  border: none;              /* Remove default border */
+  height: 2px;               /* Thickness of the line */
+  background-color: hsl(var(--Stone-150)); 
+  margin-block: 25px;
+}
+
+table tr td {
+  padding: 10px 40px;  
+  border-bottom: 1px solid hsl(var(--Stone-100));
+}
+
+table {   width: 100%;}
+
+tr:last-child td {
+  border-bottom: none; /* Remove border from last row */
+}
